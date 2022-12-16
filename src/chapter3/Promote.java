@@ -8,8 +8,8 @@ public class Promote {
         int i = 50000;
         float f = 5.67f;
         double d = 0.1234;
-        double result = (f * b) + (i/c) - (d * s);
-        System.out.println((f * b) + " + " + (i/c) + " - " + (d * s));
+        double result = (f * b) + (i / c) - (d * s);
+        System.out.println((f * b) + " + " + (i / c) + " - " + (d * s));
         System.out.println("result = " + result);
     }
 }
