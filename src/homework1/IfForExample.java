@@ -6,7 +6,11 @@ public class IfForExample {
         int b = 43;
         if (a < b) {
             System.out.println("max: " + b);
-        }
+        } else if (a > b) {
+            System.out.println("max:" + a);
+        } else
+            System.out.println("a is equal to b");
+
         for (a = 32; a <= b; a++) {
             System.out.print(a + ", ");
         }
