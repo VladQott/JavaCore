@@ -27,6 +27,7 @@ public class ArrayUtil {
         System.out.println();
 
 
+
         System.out.println();
         int evenCount = 0;
         for (int i = 0; i < array.length; i++) {
@@ -59,9 +60,6 @@ public class ArrayUtil {
             numSum += array[i];
         }
         System.out.println("Summary is: " + numSum);
-
-        for (int i = 0; i < array.length; i++) {
-        }
         System.out.println(array[0]);
         System.out.println(array[array.length - 1]);
         System.out.println(array[array.length / 2]);
