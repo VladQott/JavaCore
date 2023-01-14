@@ -14,11 +14,10 @@ public class Calculator {
     }
 
     double div(double x, double y) {
-        if (y == 0) {
+        if(y == 0) {
             System.out.println("The number is not divisible to zero");
             return -1;
-        } else {
-            return x / y;
         }
+        return x / y;
     }
 }
