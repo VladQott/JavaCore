@@ -1,12 +1,11 @@
 package chapter6;
 
-import java.util.SortedMap;
-
 public class Stack {
     int stck[] = new int[10];
     int tos;
 
     Stack() {
+
         tos = -1;
     }
 
