@@ -19,7 +19,7 @@ public class DynamicArrayDemo {
         dy.add(53);
 
         System.out.println(dy.getByIndex(3));
-        dy.deleteByIndex(3);
+        dy.deleteByIndex(4);
         dy.print();
         System.out.println();
         dy.set(1, 83);

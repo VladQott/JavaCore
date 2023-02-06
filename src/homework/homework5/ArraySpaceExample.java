@@ -9,12 +9,16 @@ public class ArraySpaceExample {
         for (int i = 0; i < spaceArray.length; i++) {
             if (spaceArray[i] == ' ') {
                 firstIndex++;
-            } else break;
+            }
+            if (spaceArray[i] != ' ')
+                break;
         }
         for (int i = spaceArray.length - 1; i >= 0; i--) {
             if (spaceArray[i] == ' ') {
                 lastIndex--;
-            } else break;
+            }
+            if (spaceArray[i] != ' ')
+                break;
         }
         char[] result = new char[lastIndex - (firstIndex - 1)];
         for (int i = 0; i < result.length; i++) {

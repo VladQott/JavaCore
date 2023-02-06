@@ -60,7 +60,7 @@ public class DynamicArray {
             array[i] = array[i - 1];
         }
         array[index] = value;
-        size--;
+        size++;
     }
 
     public boolean exists(int value) {
