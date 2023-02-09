@@ -1,19 +1,20 @@
 package homework.employee;
 
-import classwork.Book;
+
+import static homework.employee.EmployeeDemo.scanner;
 
 public class EmployeeStorage {
-    private Employee[] array = new Employee[10];
-    private int size = 0;
+    private static Employee[] array = new Employee[10];
+    private static int size = 0;
 
-    public void add(Employee value) {
+    public static void add(Employee value) {
         if (size == array.length) {
             extend();
         }
         array[size++] = value;
     }
 
-    private void extend() {
+    private static void extend() {
         Employee[] tmp = new Employee[array.length + 10];
         for (int i = 0; i < size; i++) {
             tmp[i] = array[i];
@@ -27,32 +28,33 @@ public class EmployeeStorage {
         }
     }
 
-    public void searchById(String id) {
+    public <Scanner> Employee searchById() {
+        System.out.println("please input id");
+        String id = scanner.nextLine();
         boolean found = false;
         for (int i = 0; i < size; i++) {
             Employee employee = array[i];
-            if (employee.getEmployeeID().contains(id)) {
+            if (employee.getEmployeeID().equals(id)) {
                 found = true;
-                System.out.println(employee);
+                return employee;
             }
         }
-        if (!found) {
-            System.out.println("Employee with " + id + " does not exist");
-        }
+        return null;
     }
 
-    public void searchByCompName(String compName) {
+    public Employee searchByCompName() {
+        System.out.println("please input company name");
+        String compName = scanner.nextLine();
         boolean found = false;
         for (int i = 0; i < size; i++) {
             Employee employee = array[i];
-            if (employee.getCompany().contains(compName)) {
+            if (employee.getCompany().toLowerCase().contains(compName)) {
                 found = true;
-                System.out.println(employee);
+                return employee;
             }
         }
-        if (!found) {
-            System.out.println("Employee with " + compName + " does not exist");
-        }
+        return null;
     }
 }
+
 
